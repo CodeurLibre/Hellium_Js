@@ -8,6 +8,8 @@
 }
 li {
   list-style: none;
+  z-index: 1000;
+  cursor: pointer;
 }
 p {
   font-size: 0.8rem;
@@ -16,6 +18,8 @@ body {
   min-height: 100vh;
   background: rgb(29, 29, 29);
   color: rgb(250, 250, 250);
+  overflow-x: hidden;
+  /* cursor: none; */
 }
 nav {
   display: grid;
@@ -26,6 +30,7 @@ nav ul {
   display: grid;
   grid-template-columns: 33% 33% 33%;
 }
+
 .header {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -113,4 +118,39 @@ button {
   .img-container img {
     height: 33px;
   }
+}
+
+/*! Les 03 cercles */
+.circle {
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+#circle1 {
+  height: 30px;
+  width: 30px;
+  background: rgb(226, 135, 214);
+
+  z-index: 10;
+  transition: 0.1s ease-out;
+}
+#circle2 {
+  height: 50px;
+  width: 50px;
+  background: rgb(47, 175, 64);
+
+  z-index: 5;
+  transition: 0.2s ease-out;
+}
+
+#circle3 {
+  height: 90px;
+  width: 90px;
+
+  background: rgb(50, 47, 187);
+
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: 0.3s ease-out;
 }
